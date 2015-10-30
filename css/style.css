@@ -75,7 +75,7 @@ ul{
 }
 a, a:visited, a:active{
 	text-decoration: none; 
-	color:inherit;
+	color:#fff;
 }
 h1{
 	display: inline-block;
@@ -107,36 +107,38 @@ h2{
 	}
 		.navbar_links{
 			font-size:14px;
+			display: block;
+			text-align: center;
+			padding: 4px;
 		}
 		.navbar_links:visited{
 			color: #FFF;
 		}
 		.list_style{
 			display: inline-block;
-			margin: 0 8px; 
+			/*margin: 0 8px; */
 			text-align: center;
-			padding: 4px;
+			/*padding: 4px;*/
 		}
+		.nav_sublist{
+			width:110px;
+			transition: background-color 1s;
+		}
+			.nav_sublist:hover{
+				background-color: lightblue;
+			}
 		.sublist{
 			position: absolute;
 			top: 100%;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3385ff+0,4ea3e5+100&1+0,0.33+100 */
-			background: -moz-linear-gradient(top, rgba(51,133,255,1) 0%, rgba(78,163,229,0.33) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,133,255,1)), color-stop(100%,rgba(78,163,229,0.33))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(51,133,255,1) 0%,rgba(78,163,229,0.33) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(51,133,255,1) 0%,rgba(78,163,229,0.33) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, rgba(51,133,255,1) 0%,rgba(78,163,229,0.33) 100%); /* IE10+ */
-			background: linear-gradient(to bottom, rgba(51,133,255,1) 0%,rgba(78,163,229,0.33) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3385ff', endColorstr='#544ea3e5',GradientType=0 ); /* IE6-9 */
-		
+			width: inherit;
+			background-color: lightblue;
 		}
 			.sublist_listItem{
 				display:none;
 				text-align: center;
 				padding: 0 4px;
-			}	
+			}
+
 			.nav_sublist:hover .sublist_listItem{
 				display:block;
 			}
