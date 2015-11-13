@@ -96,7 +96,7 @@ h2{
 		margin: 0 auto;
 		width: 300px;
 		padding: 10px 0;
-		transition: width 1s;
+		transition: width 0.5s;
 	}
 	.navbar{
 		position: fixed;
@@ -105,7 +105,7 @@ h2{
 		width: 100%;
 		background: #434343;
 		margin: 0 auto;
-		transition: height 1s, background-color 1s;
+		transition: height 0.5s, background-color 1s;
 		height: 150px;
 	}
 		.navbar_links{
