@@ -277,3 +277,36 @@ h2{
 .small_img{
 	width: 10%;
 }
+
+/* WIREFRAME */
+.gallery_list{
+	display: inline-block;
+	max-width: 940px;
+	padding: 0 10px;
+}
+	.gallery_list li{
+		text-align: center;
+		float: left;
+	}
+	.gallery_item{
+		border: 2px solid #fff;
+	}
+	.gallery_item img{
+		max-width: 300px;
+		z-index: 1;
+	}
+		.gallery_item:hover img{
+			opacity: 0.5;
+			transition: opacity 0.5s;
+		}
+.light_box{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	opacity:.8;
+}
