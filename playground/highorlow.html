@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>	
+	<title>High or Low</title>
+	<style type="text/css">
+		.button{
+			padding: 10px 20px;
+			background-color: lightblue; 
+			display: inline;
+		}
+		.container{
+			height: 100px;
+			padding: 0 0 50px 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>High or Low Game</h1>
+	<div class="container">
+		<p>Your Number : </p> <span class="suitColor"></span> <span id="a"></span>
+		<p>Opponent : </p> <span class="suitColor"></span> <span id="b"></span>
+		
+	</div>
+	<p>Score : </p> <span id="score"></span>
+	<div class="">
+		<div class="button" onClick="initiate()">High</div>
+		<div class="button">Low</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var a = document.getElementById("a");
+	var b = document.getElementById("b");
+	var buttonHigh = document.getElementsByClassName("button")[0];
+	var buttonLow = document.getElementsByClassName("button")[1];
+	var suitColor = document.getElementsByClassName("suitColor")[0];
+	var suitColor1 = document.getElementsByClassName("suitColor")[1];
+	
+	function initiate(){ //reveals computer's card, regenerate your card for next round
+		revealComp(); //reveals computer's card
+		generateCard(); //generates your card
+		console.log("Your number:" + card + "    " + "Computer number:" + card1);
+
+	}
+	function generateCard(){
+		yourNumber(); //generates your card
+		reveal(); //updates your card
+		console.log("generated");	
+	}
+	function yourNumber(){ //generates your card
+		var number = Math.floor(Math.random() * 13 + 1);
+		var suit = Math.floor(Math.random() * 4 + 1);
+		switch(suit){
+			case 1:
+				suit = "&spades;";
+				break;
+			case 2:
+				suit = "&hearts;";
+				break;
+			case 3:
+				suit = "&clubs;";
+				break;
+			case 4:
+				suit = "&diams;";
+				break;
+		}
+		switch(number){
+			case 1:
+				number = "A";
+				break;
+			case 11:
+				number = "J";
+				break;
+			case 12:
+				number = "Q";
+				break;
+			case 13:
+				number = "K";
+				break;
+
+		}
+		return [number, suit];
+	}
+
+	var card; //your card
+	var card1; //computer's card
+	var color; //your card's suit
+	var color1; //computer's card suit
+	
+	function reveal(){ //adds card to HTML
+		var cardGenerate = yourNumber();
+		card = cardGenerate[0];
+		color = cardGenerate[1];
+		switch(color){
+				case "&spades;":
+					suitColor.style.color = "black";
+					break;
+				case "&hearts;":
+					suitColor.style.color = "red";
+					break;
+				case "&clubs;":
+					suitColor.style.color = "black";
+					break;
+				case "&diams;":
+					suitColor.style.color = "red";
+					break;
+			}
+		suitColor.innerHTML = color;
+		a.innerHTML = card;
+	}
+	
+	
+	function revealComp(){ //adds card to HTML
+		var cardGenerateComp = yourNumber();
+		card1 = cardGenerateComp[0];
+		color1 = cardGenerateComp[1];
+		switch(color1){
+				case "&spades;":
+					suitColor1.style.color = "black";
+					break;
+				case "&hearts;":
+					suitColor1.style.color = "red";
+					break;
+				case "&clubs;":
+					suitColor1.style.color = "black";
+					break;
+				case "&diams;":
+					suitColor1.style.color = "red";
+					break;
+			}
+		//checks if your card and computer's card are the same
+		if(card == card1){ //if equal, regenerate your card and add to HTML
+			yourNumber();
+			reveal();
+			console.log("same card");
+		}
+		else{ //if not equal, add card to HTML
+			suitColor1.innerHTML = color1;
+			b.innerHTML = card1;
+		}
+	}
+	
+	window.onload = reveal(); 
+
+
+
+	function check(number, compNumber){
+		if(number > compNumber){
+			console.log("You win!");
+		}
+	}
+
+</script>
+</html>
