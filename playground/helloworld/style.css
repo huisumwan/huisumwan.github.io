@@ -29,3 +29,13 @@ li{
 .ng-valid.ng-dirty{
 	border-color: green;
 }
+
+.nav-pills > li.active > a:hover{
+	background: #ac005f;
+}
+
+.nav > li > a{
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}
