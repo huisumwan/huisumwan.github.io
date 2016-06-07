@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html ng-app="homePage" lang="en">
 	<head>
 		<meta charset ="utf-8" http-equiv="Content-Type" content="text/html; charset=UTF-8" name="viewport" content="width=device-width"/>
 		<title>3DLE | 3D Learning Environment</title>
@@ -8,8 +8,10 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<!--script src="scripts/respond.min.js"></script-->
 		<script type="text/javascript" src="scripts/javascript.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
 	</head>
 	<body id="top">
 		<div class="navbar">
@@ -62,179 +64,181 @@
 				</ul>
 			</div>
 		</div>
-		<div class="content" id="persona1">
-			<div class="container" >
-				<div class="h1_style clr" >
-					<h1>Persona 1</h1>
+		<div ng-controller="PersonaController as persona">
+			<div class="content" id="persona1" ng-repeat="person in persona.profile">
+				<div class="container" >
+					<div class="h1_style clr" >
+						<h1>Persona {{}}</h1>
+					</div>
+					<div class="clr">
+						<div class="col span_3 clr">
+							<img class="persona_pic" src="images/rothman.jpg">
+						</div>
+							<ul class="col span_4 clr">
+								<li><span class="persona_list_style">Persona Type:</span> Middle School Teacher</li>
+								<li><span class="persona_list_style">Name:</span> Kay Rothman</li>
+								<li><span class="persona_list_style">Age:</span> 43</li>
+								<li><span class="persona_list_style">Location:</span> Manhattan, New York</li>
+								<li><span class="persona_list_style">Technical Comfort:</span> Novice</li>
+								<li><span class="persona_list_style">Profession:</span> Ancient Greece Teacher</li>
+							</ul>
+						<div class="col span_5 clr">
+							<p class="persona_quote">“I’ve been teaching history for over 15 years and everyday there is something new to learn. I would like to communicate the knowledge I have gained to my students and I constantly strive to improve my approach to teaching.”</p>
+						</div>
+					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Background</h2>
+							<p>Kay Rothman grew up in New York City and graduated from Columbia University with a Ph.D. in Ancient History. Early in her career she accepted a job offer from a local middle school to teach history to 6-8th grade students. Kay Rothman fell in love with her job and strives everyday to teach and inspire her students.</p>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Frustrations</h2>
+							<ul class="persona_detail_style">
+								<li>Kay’s students often think history is boring and not fun</li>
+								<li>They do not do as well on her exams as she would like them to</li>
+								<li>She feels like her teaching methods are not reaching her students as easily as she would’ve liked</li>
+							</ul>
+						</div>
+					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Motivations</h2>
+							<ul class="persona_detail_style">
+								<li>Kay researches and educates herself on relevant subjects daily</li>
+								<li>Enjoys using web applications and resources</li>
+								<li>Continuously looking for new and innovative ways to teach her students</li>
+							</ul>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Ideal Experience</h2>
+							<ul class="persona_detail_style">
+								<li>Kay would like a more interactive teaching method that can spark interest within her students</li>
+								<li>She would like to provide students with an alternative to textbook readings</li>
+								<li>She would also like to be able to gauge her students progress as well</li>
+							</ul>
+						</div>
+					</div>
+	                
 				</div>
-				<div class="clr">
-					<div class="col span_3 clr">
-						<img class="persona_pic" src="images/rothman.jpg">
-					</div>
-						<ul class="col span_4 clr">
-							<li><span class="persona_list_style">Persona Type:</span> Middle School Teacher</li>
-							<li><span class="persona_list_style">Name:</span> Kay Rothman</li>
-							<li><span class="persona_list_style">Age:</span> 43</li>
-							<li><span class="persona_list_style">Location:</span> Manhattan, New York</li>
-							<li><span class="persona_list_style">Technical Comfort:</span> Novice</li>
-							<li><span class="persona_list_style">Profession:</span> Ancient Greece Teacher</li>
-						</ul>
-					<div class="col span_5 clr">
-						<p class="persona_quote">“I’ve been teaching history for over 15 years and everyday there is something new to learn. I would like to communicate the knowledge I have gained to my students and I constantly strive to improve my approach to teaching.”</p>
-					</div>
-				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Background</h2>
-						<p>Kay Rothman grew up in New York City and graduated from Columbia University with a Ph.D. in Ancient History. Early in her career she accepted a job offer from a local middle school to teach history to 6-8th grade students. Kay Rothman fell in love with her job and strives everyday to teach and inspire her students.</p>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Frustrations</h2>
-						<ul class="persona_detail_style">
-							<li>Kay’s students often think history is boring and not fun</li>
-							<li>They do not do as well on her exams as she would like them to</li>
-							<li>She feels like her teaching methods are not reaching her students as easily as she would’ve liked</li>
-						</ul>
-					</div>
-				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Motivations</h2>
-						<ul class="persona_detail_style">
-							<li>Kay researches and educates herself on relevant subjects daily</li>
-							<li>Enjoys using web applications and resources</li>
-							<li>Continuously looking for new and innovative ways to teach her students</li>
-						</ul>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Ideal Experience</h2>
-						<ul class="persona_detail_style">
-							<li>Kay would like a more interactive teaching method that can spark interest within her students</li>
-							<li>She would like to provide students with an alternative to textbook readings</li>
-							<li>She would also like to be able to gauge her students progress as well</li>
-						</ul>
-					</div>
-				</div>
-                
 			</div>
-		</div>
-	
-		<div class="content" id="persona2">
-			<div class="container">
-				<div class="h1_style">
-					<h1>Persona 2</h1>
-				</div>
-				<div class="clr">
-					<div class="col span_3 clr">
-						<img class="persona_pic" src="images/jeffrey.jpg">
-					</div>
-						<ul class="col span_4 clr">
-							<li><span class="persona_list_style">Persona Type:</span> 8th grader</li>
-							<li><span class="persona_list_style">Name:</span> Jeffrey White</li>
-							<li><span class="persona_list_style">Age:</span> 13</li>
-							<li><span class="persona_list_style">Location:</span> Brooklyn, New York</li>
-							<li><span class="persona_list_style">Technical Comfort:</span> Technically savvy</li>
-							<li><span class="persona_list_style">Profession:</span> Student</li>
-						</ul>
-					<div class="col span_5 clr">
-						<p class="persona_quote">“I have always done well in school, but history will always be a hard subject for me to grasp. There are too many important dates and events to remember.”</p>
-					</div>
-				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Background</h2>
-						<p>Jeffrey lives with his parents and his two younger sisters in an apartment. Jeffrey attends Mark Twain Junior High School. He loves playing sports, such as basketball and football and his favorite subject is mathematics. Jeffrey looks forward to visiting his family in Barbados every summer.</p>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Frustrations</h2>
-						<ul class="persona_detail_style">
-							<li>Jeffrey’s history grades are the only thing keeping him from a Gold Honors Award at graduation</li>
-							<li>He would like more ways to learn history than from the textbook</li>
-							<li>He feels defeated when he cannot remember an important date of historical event </li>
-						</ul>
-					</div>
-				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Motivations</h2>
-						<ul class="persona_detail_style">
-							<li>Jeffrey would like an easier, more interactive way to learn history</li>
-							<li>He enjoys using social and educational apps on his phone</li>
-							<li>He prefers hands-on learning</li>
-						</ul>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Ideal Experience</h2>
-						<ul class="persona_detail_style">
-							<li>Jeffrey would like to learn history in an interactive way</li>
-							<li>He would like to be able to focus on one historical event at a time</li>
-							<li>He would also like to be able to save certain information so he can easily find it later</li>
-							<li>He thinks being quizzed at the end of every section would be very beneficial for his memory</li>
-						</ul>
-					</div>
-				</div>
-				
-                
-			</div>
-		</div>
 		
-		<div class="content" id="persona3">
-			<div class="container">
-				<div class="h1_style">
-					<h1>Persona 3</h1>
+			<div class="content" id="persona2">
+				<div class="container">
+					<div class="h1_style">
+						<h1>Persona 2</h1>
+					</div>
+					<div class="clr">
+						<div class="col span_3 clr">
+							<img class="persona_pic" src="images/jeffrey.jpg">
+						</div>
+							<ul class="col span_4 clr">
+								<li><span class="persona_list_style">Persona Type:</span> 8th grader</li>
+								<li><span class="persona_list_style">Name:</span> Jeffrey White</li>
+								<li><span class="persona_list_style">Age:</span> 13</li>
+								<li><span class="persona_list_style">Location:</span> Brooklyn, New York</li>
+								<li><span class="persona_list_style">Technical Comfort:</span> Technically savvy</li>
+								<li><span class="persona_list_style">Profession:</span> Student</li>
+							</ul>
+						<div class="col span_5 clr">
+							<p class="persona_quote">“I have always done well in school, but history will always be a hard subject for me to grasp. There are too many important dates and events to remember.”</p>
+						</div>
+					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Background</h2>
+							<p>Jeffrey lives with his parents and his two younger sisters in an apartment. Jeffrey attends Mark Twain Junior High School. He loves playing sports, such as basketball and football and his favorite subject is mathematics. Jeffrey looks forward to visiting his family in Barbados every summer.</p>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Frustrations</h2>
+							<ul class="persona_detail_style">
+								<li>Jeffrey’s history grades are the only thing keeping him from a Gold Honors Award at graduation</li>
+								<li>He would like more ways to learn history than from the textbook</li>
+								<li>He feels defeated when he cannot remember an important date of historical event </li>
+							</ul>
+						</div>
+					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Motivations</h2>
+							<ul class="persona_detail_style">
+								<li>Jeffrey would like an easier, more interactive way to learn history</li>
+								<li>He enjoys using social and educational apps on his phone</li>
+								<li>He prefers hands-on learning</li>
+							</ul>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Ideal Experience</h2>
+							<ul class="persona_detail_style">
+								<li>Jeffrey would like to learn history in an interactive way</li>
+								<li>He would like to be able to focus on one historical event at a time</li>
+								<li>He would also like to be able to save certain information so he can easily find it later</li>
+								<li>He thinks being quizzed at the end of every section would be very beneficial for his memory</li>
+							</ul>
+						</div>
+					</div>
+					
+	                
 				</div>
-				<div class="clr">
-					<div class="col span_3 clr">
-						<img class="persona_pic" src="images/librarian.jpg">
+			</div>
+			
+			<div class="content" id="persona3">
+				<div class="container">
+					<div class="h1_style">
+						<h1>Persona 3</h1>
 					</div>
-						<ul class="col span_4 clr">
-							<li><span class="persona_list_style">Persona Type:</span> Librarian</li>
-							<li><span class="persona_list_style">Name:</span> Miranda Tuniz</li>
-							<li><span class="persona_list_style">Age:</span> 33</li>
-							<li><span class="persona_list_style">Location:</span> Philadelphia, Pennsylvania</li>
-							<li><span class="persona_list_style">Technical Comfort:</span> Technically savvy</li>
-							<li><span class="persona_list_style">Profession:</span> Librarian</li>
-						</ul>
-					<div class="col span_5 clr">
-						<p class="persona_quote">“I love to watch children learn but I also feel discouraged when children are not eager to learn. Especially with learning history, children do not find reading and memorizing dates appealing.  As a librarian, I want children to learn and the library is the perfect place for that.”</p>
+					<div class="clr">
+						<div class="col span_3 clr">
+							<img class="persona_pic" src="images/librarian.jpg">
+						</div>
+							<ul class="col span_4 clr">
+								<li><span class="persona_list_style">Persona Type:</span> Librarian</li>
+								<li><span class="persona_list_style">Name:</span> Miranda Tuniz</li>
+								<li><span class="persona_list_style">Age:</span> 33</li>
+								<li><span class="persona_list_style">Location:</span> Philadelphia, Pennsylvania</li>
+								<li><span class="persona_list_style">Technical Comfort:</span> Technically savvy</li>
+								<li><span class="persona_list_style">Profession:</span> Librarian</li>
+							</ul>
+						<div class="col span_5 clr">
+							<p class="persona_quote">“I love to watch children learn but I also feel discouraged when children are not eager to learn. Especially with learning history, children do not find reading and memorizing dates appealing.  As a librarian, I want children to learn and the library is the perfect place for that.”</p>
+						</div>
 					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Background</h2>
+							<p>Miranda Tuniz grew up in Philadelphia and graduated from Drexel University with a Bachelors in Sociology. Miranda first fell in love with reading books at the age of 8 and never stopped reading a book since the first time she started. Miranda’s profuse love for books has inspired her to become a librarian after receiving her degree in Sociology and her love to spread knowledge motivates her to do her best!</p>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Frustrations</h2>
+							<ul class="persona_detail_style">
+								<li>Many people often think the library is boring, outdated, and static</li>
+								<li>Libraries are public and do not receive the amount of attention or funds it deserves</li>
+								<li>Miranda wishes that more people would go to the library </li>
+								<li>Miranda wants a new innovative way for people to learn interactively</li>
+							</ul>
+						</div>
+					</div>
+					<div class="persona_info clr gutters">
+						<div class="col span_6">
+							<h2 class="h2_style">Motivations</h2>
+							<ul class="persona_detail_style">
+								<li>Miranda’s love for books spurs her interest in new ways for learning</li>
+								<li>New technology in information technology creates new and refreshing methods of learning</li>
+								<li>Libraries across the nation will be receiving funds to upgrade their resources</li>
+								<li>Miranda is compelled to make the library a resourceful place for the community </li>
+							</ul>
+						</div>
+						<div class="col span_6">
+							<h2 class="h2_style">Ideal Experience</h2>
+							<ul class="persona_detail_style">
+								<li>Miranda wishes that everyone values information and learning as much as she does</li>
+								<li>Although many don’t like to read, she wants people to learn through another more interactive method</li>
+								<li>Miranda also wishes that 3DLE will create a new interest in learning geography and history</li>
+							</ul>
+						</div>
+					</div>
+					
+	                
 				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Background</h2>
-						<p>Miranda Tuniz grew up in Philadelphia and graduated from Drexel University with a Bachelors in Sociology. Miranda first fell in love with reading books at the age of 8 and never stopped reading a book since the first time she started. Miranda’s profuse love for books has inspired her to become a librarian after receiving her degree in Sociology and her love to spread knowledge motivates her to do her best!</p>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Frustrations</h2>
-						<ul class="persona_detail_style">
-							<li>Many people often think the library is boring, outdated, and static</li>
-							<li>Libraries are public and do not receive the amount of attention or funds it deserves</li>
-							<li>Miranda wishes that more people would go to the library </li>
-							<li>Miranda wants a new innovative way for people to learn interactively</li>
-						</ul>
-					</div>
-				</div>
-				<div class="persona_info clr gutters">
-					<div class="col span_6">
-						<h2 class="h2_style">Motivations</h2>
-						<ul class="persona_detail_style">
-							<li>Miranda’s love for books spurs her interest in new ways for learning</li>
-							<li>New technology in information technology creates new and refreshing methods of learning</li>
-							<li>Libraries across the nation will be receiving funds to upgrade their resources</li>
-							<li>Miranda is compelled to make the library a resourceful place for the community </li>
-						</ul>
-					</div>
-					<div class="col span_6">
-						<h2 class="h2_style">Ideal Experience</h2>
-						<ul class="persona_detail_style">
-							<li>Miranda wishes that everyone values information and learning as much as she does</li>
-							<li>Although many don’t like to read, she wants people to learn through another more interactive method</li>
-							<li>Miranda also wishes that 3DLE will create a new interest in learning geography and history</li>
-						</ul>
-					</div>
-				</div>
-				
-                
 			</div>
 		</div>
 		<div class="social">

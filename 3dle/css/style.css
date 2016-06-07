@@ -73,7 +73,7 @@ ul{
 	display: block;
 	text-align: center;
 }
-a, a:visited, a:active{
+a, a:visited, a:active, a:hover{
 	text-decoration: none; 
 	color:#fff;
 }
@@ -84,9 +84,9 @@ h1{
 	font-size: 38px;
 	padding: 20px 0 0 0;
 }
-h2{
-
-}
+/*li{
+	list-style: none;
+}*/
 .header{
 	background: #3385FF;
 	height: 157px;
@@ -157,7 +157,29 @@ h2{
 	.intro_p{
 		margin: 0 0 10px 0;
 	}
-	.persona_pic{
+	.list_text_style{
+	font-size: 14px;
+	color: #fff;
+	}
+	.list_style a:hover{
+		color: #000;
+	}
+
+/* PERSONA  */
+.tabBar{
+	margin-top: 10px;
+	text-align: center;
+}
+.tabBar ul{
+	display: inline-block;
+}
+.tabBar a{
+	color: #337ab7;
+}
+.nav-pills > li.active > a{
+	background-color: #337ab7;
+}
+.persona_pic{
 		width: 200px;
 	}
 	.persona_info{
@@ -179,13 +201,9 @@ h2{
 	.persona_detail_style{
 		list-style-type: circle !important;
 	}
-.list_text_style{
-	font-size: 14px;
-	color: #fff;
-}
-	.list_style a:hover{
-		color: #000;
-	}
+
+
+
 .scenario_img{
 	margin: 0 auto;
 	padding: 10px 0;
