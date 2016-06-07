@@ -66,11 +66,11 @@
 			</div>
 		</div>
 		<div ng-controller="PersonaController as persona">
-			<div class="tabBar col-md-12">
+			<div class="tabBar col-md-12" ng-controller="TabController as tab">
 				<ul class="nav nav-pills codebold">
-					<li><a href="">Persona 1</a></li>
-					<li><a href="">Persona 2</a></li>
-					<li><a href="">Persona 3</a></li>
+					<li><a href="" ng-click="tab.setTab(1)">Persona 1</a></li>
+					<li><a href="" ng-click="tab.setTab(2)">Persona 2</a></li>
+					<li><a href="" ng-click="tab.setTab(3)">Persona 3</a></li>
 				</ul>
 			</div>
 			<div class="content" id="persona1" ng-repeat="person in persona.profiles">
