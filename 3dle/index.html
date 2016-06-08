@@ -2,7 +2,7 @@
 
 <html ng-app="homePage" lang="en">
 	<head>
-		<meta charset ="utf-8" http-equiv="Content-Type" content="text/html; charset=UTF-8" name="viewport" content="width=device-width"/>
+		<meta charset ="utf-8" http-equiv="Content-Type" charset="UTF-8" name="viewport" content="width=device-width"/>
 		<title>3DLE | 3D Learning Environment</title>
 		
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -67,13 +67,13 @@
 		</div>
 		<div ng-controller="PersonaController as persona">
 			<div class="tabBar col-md-12" ng-controller="TabController as tab">
-				<ul class="nav nav-pills codebold">
-					<li><a href="" ng-click="tab.setTab(1)">Persona 1</a></li>
-					<li><a href="" ng-click="tab.setTab(2)">Persona 2</a></li>
-					<li><a href="" ng-click="tab.setTab(3)">Persona 3</a></li>
+				<ul class="nav nav-pills codebold" >
+					<li ng-class="{active: tab.isSet(1)}"><a href="" ng-click="tab.setTab()">Persona 1 </a></li>
+					<li ng-class="{active: tab.isSet(2)}"><a href="" ng-click="tab.setTab(persona.profiles[1].personaNo)">Persona 2</a></li>
+					<li ng-class="{active: tab.isSet(3)}"><a href="" ng-click="tab.setTab(persona.profiles[2].personaNo)">Persona 3</a></li>
 				</ul>
 			</div>
-			<div class="content" id="persona1" ng-repeat="person in persona.profiles">
+			<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet(tab.tab)">
 				<div class="container" >
 					<div class="h1_style clr" >
 						<h1>Persona {{person.personaNo}}</h1>
@@ -123,13 +123,11 @@
 	                
 				</div>
 			</div>
-		
-			
 		</div>
 		<div class="content" id="scenario1">
 			<div class="container">
 				<div class="h1_style">
-					<h1>Scenario 1</h1>
+					<h1>Scenario 1 </h1>
 				</div>
 				<p>Kay discovered a new software called 3DLE that could potentially be a great learning tool for her Ancient Greek students at a technology fair she frequents. She decides to use and test the software extensively to see whether it could be of help to her students. She wants to learn the software's in and outs in order to generate class content based on the software.</p>
 				<img class="scenario_img" src="images/KayRothmanScenario.png">

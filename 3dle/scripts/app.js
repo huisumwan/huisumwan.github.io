@@ -8,7 +8,8 @@ app.controller('TabController', function(){
 	this.tab = 1;
 	this.setTab = function(currentTab){
 		this.tab = currentTab;
-	};
+		console.log(currentTab);
+	}
 	this.isSet = function(checkTab){
 		return this.tab === checkTab;
 	}
@@ -17,6 +18,7 @@ app.controller('TabController', function(){
 var personas = [
 	{
 		personaNo: 1,
+		personaTitle: 'Persona 1',
 		personaType: 'Middle School Teacher',
 		name: 'Kay Rothman',
 		age: 43,
@@ -44,6 +46,7 @@ var personas = [
 	},
 	{
 		personaNo: 2,
+		personaTitle: 'Persona 2',
 		personaType: '8th grader',
 		name: 'Jeffrey White',
 		age: 13,
@@ -72,6 +75,7 @@ var personas = [
 	},
 	{
 		personaNo: 3,
+		personaTitle: 'Persona 3',
 		personaType: 'Librarian',
 		name: 'Miranda Tuniz',
 		age: 33,

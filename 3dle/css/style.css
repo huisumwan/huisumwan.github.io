@@ -177,7 +177,10 @@ h1{
 	color: #337ab7;
 }
 .nav-pills > li.active > a{
-	background-color: #337ab7;
+	background: #337ab7;
+}
+.nav-pills > li.active > a:hover{
+	background: #ac005f;
 }
 .persona_pic{
 		width: 200px;
