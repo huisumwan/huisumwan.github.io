@@ -176,10 +176,11 @@ h1{
 .tabBar a{
 	color: #337ab7;
 }
-.nav-pills > li.active > a{
+.nav-pills > li > a.active{
 	background: #337ab7;
+	color: #fff;
 }
-.nav-pills > li.active > a:hover{
+.nav-pills > li > a.active:hover{
 	background: #ac005f;
 }
 .persona_pic{

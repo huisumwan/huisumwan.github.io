@@ -68,9 +68,7 @@
 		<div ng-controller="PersonaController as persona">
 			<div class="tabBar col-md-12" ng-controller="TabController as tab">
 				<ul class="nav nav-pills codebold" >
-					<li ng-class="{active: tab.isSet(1)}"><a href="" ng-click="tab.setTab()">Persona 1 </a></li>
-					<li ng-class="{active: tab.isSet(2)}"><a href="" ng-click="tab.setTab(persona.profiles[1].personaNo)">Persona 2</a></li>
-					<li ng-class="{active: tab.isSet(3)}"><a href="" ng-click="tab.setTab(persona.profiles[2].personaNo)">Persona 3</a></li>
+					<li ng-repeat="personaTab in persona.profiles"><a href="" ng-class="{active: tab.isSet(personaTab.personaNo)}" ng-click="tab.setTab(personaTab.personaNo)">Persona {{personaTab.personaNo}}</a></li>
 				</ul>
 			</div>
 			<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet(tab.tab)">
