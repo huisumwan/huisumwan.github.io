@@ -5,7 +5,7 @@
 		<meta charset ="utf-8" http-equiv="Content-Type" charset="UTF-8" name="viewport" content="width=device-width"/>
 		<title>3DLE | 3D Learning Environment</title>
 		
-		<!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" media="all" href="css/style.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -71,7 +71,7 @@
 					<li ng-repeat="personaTab in persona.profiles"><a href="" ng-class="{active: tab.isSet(personaTab.personaNo)}" ng-click="tab.setTab(personaTab.personaNo)">Persona {{personaTab.personaNo}}</a></li>
 				</ul>
 			</div>
-			<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet(tab.tab)">
+			<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet()">
 				<div class="container" >
 					<div class="h1_style clr" >
 						<h1>Persona {{person.personaNo}}</h1>
