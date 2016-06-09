@@ -71,7 +71,7 @@
 					<li ng-repeat="personaTab in persona.profiles"><a href="" ng-class="{active: tab.isSet(personaTab.personaNo)}" ng-click="tab.setTab(personaTab.personaNo)">Persona {{personaTab.personaNo}}</a></li>
 				</ul>
 			</div>
-			<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet()">
+			<div class="content" id="persona1" ng-repeat="person in persona.profiles">
 				<div class="container" >
 					<div class="h1_style clr" >
 						<h1>Persona {{person.personaNo}}</h1>
