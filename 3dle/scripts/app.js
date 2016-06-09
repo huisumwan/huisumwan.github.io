@@ -15,6 +15,10 @@ app.controller('TabController', function(){
 	}
 });
 
+app.controller('ScenarioController', function(){
+	this.situations = scenarios;
+});
+
 var personas = [
 	{
 		personaNo: 1,
@@ -104,4 +108,22 @@ var personas = [
 		image: 'images/librarian.jpg' 
 	}
 
+];
+
+var scenarios = [
+	{
+		scenarioNo: 1,
+		scenarioText: "Kay discovered a new software called 3DLE that could potentially be a great learning tool for her Ancient Greek students at a technology fair she frequents. She decides to use and test the software extensively to see whether it could be of help to her students. She wants to learn the software's in and outs in order to generate class content based on the software.",
+		image: "images/KayRothmanScenario.png",
+	},
+	{
+		scenarioNo: 2,
+		scenarioText: "In Jeffrey's Ancient History class his teacher introduced a new learning software, 3DLE. She informed them that this will be their new way of learning and studying outside of the classroom. His teacher understood that the students were having a difficult time comprehending the textbook, so she believed this would be a more effective approach. Jeffrey is hopeful to try a more interactive way of learning his more difficult subject. When he arrives home after school, his first task is to see what 3DLE is all about.",
+		image: "images/JeffreyWhiteScenario.png",
+	},
+	{
+		scenarioNo: 3,
+		scenarioText: "Troubled with people’s perception of the library as boring and dull, Miranda Tuniz seeks a new resource in refreshing people’s experience in the library. After discovering the new software 3DLE, Miranda has gained new hopes of making the library a more exciting place to learn. With 3DLE, children are more engaged and excited in learning geography and history.",
+		image: "images/MirandaTunizScenario.png",
+	}
 ];

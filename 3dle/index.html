@@ -70,98 +70,69 @@
 				<ul class="nav nav-pills codebold" >
 					<li ng-repeat="personaTab in persona.profiles"><a href="" ng-class="{active: tab.isSet(personaTab.personaNo)}" ng-click="tab.setTab(personaTab.personaNo)">Persona {{personaTab.personaNo}}</a></li>
 				</ul>
-			</div>
-			<div class="content" id="persona1" ng-repeat="person in persona.profiles">
-				<div class="container" >
-					<div class="h1_style clr" >
-						<h1>Persona {{person.personaNo}}</h1>
+				<div class="content" id="persona1" ng-repeat="person in persona.profiles" ng-show="tab.isSet(person.personaNo)">
+					<div class="container" >
+						<div class="h1_style clr" >
+							<h1>Persona {{person.personaNo}}</h1>
+						</div>
+						<div class="clr">
+							<div class="col-md-3">
+								<img class="persona_pic" ng-src="{{person.image}}">
+							</div>
+								<ul class="col-md-4">
+									<li><span class="persona_list_style">Persona Type:</span> {{person.personaType}}</li>
+									<li><span class="persona_list_style">Name:</span> {{person.name}}</li>
+									<li><span class="persona_list_style">Age:</span> {{person.age}}</li>
+									<li><span class="persona_list_style">Location:</span> {{person.location}}</li>
+									<li><span class="persona_list_style">Technical Comfort:</span> {{person.technicalComfort}}</li>
+									<li><span class="persona_list_style">Profession:</span> {{person.profession}}</li>
+								</ul>
+							<div class="col-md-5">
+								<p class="persona_quote">“{{person.quote}}”</p>
+							</div>
+						</div>
+						<div class="persona_info clr gutters">
+							<div class="col-md-6">
+								<h2 class="h2_style">Background</h2>
+								<p>{{person.background}}</p>
+							</div>
+							<div class="col-md-6">
+								<h2 class="h2_style">Frustrations</h2>
+								<ul class="persona_detail_style">
+									<li ng-repeat="frustration in person.frustrations">{{frustration}}</li>
+								</ul>
+							</div>
+						</div>
+						<div class="persona_info clr gutters">
+							<div class="col-md-6">
+								<h2 class="h2_style">Motivations</h2>
+								<ul class="persona_detail_style">
+									<li ng-repeat="motivation in person.motivations">{{motivation}}</li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<h2 class="h2_style">Ideal Experience</h2>
+								<ul class="persona_detail_style">
+									<li ng-repeat="ideal in person.idealExperience">{{ideal}}</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<div class="clr">
-						<div class="col-md-3">
-							<img class="persona_pic" ng-src="{{person.image}}">
-						</div>
-							<ul class="col-md-4">
-								<li><span class="persona_list_style">Persona Type:</span> {{person.personaType}}</li>
-								<li><span class="persona_list_style">Name:</span> {{person.name}}</li>
-								<li><span class="persona_list_style">Age:</span> {{person.age}}</li>
-								<li><span class="persona_list_style">Location:</span> {{person.location}}</li>
-								<li><span class="persona_list_style">Technical Comfort:</span> {{person.technicalComfort}}</li>
-								<li><span class="persona_list_style">Profession:</span> {{person.profession}}</li>
-							</ul>
-						<div class="col-md-5">
-							<p class="persona_quote">“{{person.quote}}”</p>
-						</div>
-					</div>
-					<div class="persona_info clr gutters">
-						<div class="col-md-6">
-							<h2 class="h2_style">Background</h2>
-							<p>{{person.background}}</p>
-						</div>
-						<div class="col-md-6">
-							<h2 class="h2_style">Frustrations</h2>
-							<ul class="persona_detail_style">
-								<li ng-repeat="frustration in person.frustrations">{{frustration}}</li>
-							</ul>
-						</div>
-					</div>
-					<div class="persona_info clr gutters">
-						<div class="col-md-6">
-							<h2 class="h2_style">Motivations</h2>
-							<ul class="persona_detail_style">
-								<li ng-repeat="motivation in person.motivations">{{motivation}}</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h2 class="h2_style">Ideal Experience</h2>
-							<ul class="persona_detail_style">
-								<li ng-repeat="ideal in person.idealExperience">{{ideal}}</li>
-							</ul>
-						</div>
-					</div>
-	                
 				</div>
 			</div>
 		</div>
-		<div class="content" id="scenario1">
-			<div class="container">
-				<div class="h1_style">
-					<h1>Scenario 1 </h1>
+		<div ng-controller="ScenarioController as scenarioCtrl">
+			<div class="tabBar container" ng-controller="TabController as tab">
+				<ul class="nav nav-pills codebold ">
+					<li ng-repeat="scenarioTab in scenarioCtrl.situations"><a href="" ng-class="{active: tab.isSet(scenarioTab.scenarioNo)}" ng-click="tab.setTab(scenarioTab.scenarioNo)">Scenario {{scenarioTab.scenarioNo}}</a></li>
+				</ul>
+				<div class="content col-md-12" id="scenario1" ng-repeat="scenario in scenarioCtrl.situations" ng-show="tab.isSet(scenario.scenarioNo)">
+					<div class="h1_style">
+						<h1>Scenario {{scenario.scenarioNo}}</h1>
+					</div>
+					<p>{{scenario.scenarioText}}</p>
+					<img class="scenario_img img-responsive" ng-src="{{scenario.image}}">
 				</div>
-				<p>Kay discovered a new software called 3DLE that could potentially be a great learning tool for her Ancient Greek students at a technology fair she frequents. She decides to use and test the software extensively to see whether it could be of help to her students. She wants to learn the software's in and outs in order to generate class content based on the software.</p>
-				<img class="scenario_img" src="images/KayRothmanScenario.png">
-				
-                
-			</div>
-		</div>
-		
-		<div class="content" id="scenario2">
-			<div class="container">
-				<div class="h1_style">
-					<h1>Scenario 2</h1>
-				</div>
-				<p>In Jeffrey's Ancient History class his teacher introduced a new learning 
-software, 3DLE. She informed them that this will be their new way of 
-learning and studying outside of the classroom. His teacher understood 
-that the students were having a difficult time comprehending the textbook, 
-so she believed this would be a more effective approach. Jeffrey is 
-hopeful to try a more interactive way of learning his more difficult subject. 
-When he arrives home after school, his first task is to see what 3DLE is 
-all about. 
-</p>
-					<img class="scenario_img" src="images/JeffreyWhiteScenario.png">
-				
-				
-			</div>
-		</div>
-		<div class="content" id="scenario3">
-			<div class="container">
-				<div class="h1_style">
-					<h1>Scenario 3</h1>
-				</div>
-				<p>Troubled with people’s perception of the library as boring and dull, Miranda Tuniz seeks a new resource in refreshing people’s experience in the library. After discovering the new software 3DLE, Miranda has gained new hopes of making the library a more exciting place to learn. With 3DLE, children are more engaged and excited in learning geography and history. </p>
-					<img class="scenario_img" src="images/MirandaTunizScenario.png">
-				
-                
 			</div>
 		</div>
 		<div class="content" id="gui">
