@@ -70,7 +70,7 @@
 }
 ul{
 	list-style-type: none;
-	display: block;
+	display: inline-block;
 	text-align: center;
 }
 a, a:visited, a:active, a:hover{
@@ -84,6 +84,7 @@ h1{
 	font-size: 38px;
 	padding: 20px 0 0 0;
 }
+
 /*li{
 	list-style: none;
 }*/
@@ -107,6 +108,7 @@ h1{
 		margin: 0 auto;
 		transition: height 0.5s, background-color 1s;
 		height: 153px;
+		text-align: center;
 	}
 		.navbar_links{
 			font-size:14px;
@@ -176,11 +178,11 @@ h1{
 .tabBar a{
 	color: #337ab7;
 }
-.nav-pills > li > a.active{
+.tabBar > ul > li > a.active{
 	background: #337ab7;
 	color: #fff;
 }
-.nav-pills > li > a.active:hover{
+.tabBar > ul > li > a.active:hover{
 	background: #ac005f;
 }
 .persona_pic{
@@ -228,10 +230,18 @@ h1{
 	padding: 0 0 20px 0;
 	max-width: 600px;
 }
-.social{
+/*.social{
 	background: #4D94FF;
 	border-bottom: solid 5px #56c2b9;
+}*/
+.social{
+	position: fixed;
+	right: 0;
+	top: 200px;
 }
+	.social > ul > li{
+		display: block;
+	}
 	.social_text{
 		font-size: 34px;
 		font-weight: normal;

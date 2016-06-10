@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    var a = function(){
+        alert(1);
+    };
+    a();
     $(".js_intro_link").click(function() {
         $('html, body').animate({
         scrollTop: $("#top").offset().top 
@@ -16,43 +20,6 @@ $(document).ready(function() {
             }, 1000);
         }
     });
-     $(".js_persona1_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-            $('html, body').animate({
-            scrollTop: $("#persona1").offset().top - 89
-            }, 1000);
-        }
-        else{
-            $('html, body').animate({
-            scrollTop: $("#persona1").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-        
-    });
-      $(".js_persona2_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-            $('html, body').animate({
-            scrollTop: $("#persona2").offset().top - 89
-            }, 1000);
-        }
-        else{
-            $('html, body').animate({
-            scrollTop: $("#persona2").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
-      $(".js_persona3_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-            $('html, body').animate({
-            scrollTop: $("#persona3").offset().top - 89
-            }, 1000);
-        }
-        else{
-            $('html, body').animate({
-            scrollTop: $("#persona3").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
       $(".js_scenario_link").click(function() {
         if(!$(".navbar").hasClass("shrink")){
             $('html, body').animate({
@@ -62,54 +29,6 @@ $(document).ready(function() {
         else{
             $('html, body').animate({
             scrollTop: $("#scenario1").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
-      $(".js_scenario1_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-             $('html, body').animate({
-            scrollTop: $("#scenario1").offset().top - 89
-            }, 1000);
-        }
-        else{
-             $('html, body').animate({
-            scrollTop: $("#scenario1").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
-      $(".js_scenario2_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-            $('html, body').animate({
-            scrollTop: $("#scenario2").offset().top - 89
-            }, 1000);
-        }
-        else{
-            $('html, body').animate({
-            scrollTop: $("#scenario2").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
-       $(".js_scenario3_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-            $('html, body').animate({
-            scrollTop: $("#scenario3").offset().top - 89
-            }, 1000);
-        }
-        else{
-            $('html, body').animate({
-            scrollTop: $("#scenario3").offset().top - $(".shrink").height()
-            }, 1000);
-        }
-    });
-       $(".js_wireframe_link").click(function() {
-        if(!$(".navbar").hasClass("shrink")){
-             $('html, body').animate({
-            scrollTop: $("#wireframe").offset().top - 89
-            }, 1000);
-        }
-        else{
-             $('html, body').animate({
-            scrollTop: $("#wireframe").offset().top - $(".shrink").height()
             }, 1000);
         }
     });

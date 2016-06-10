@@ -19,23 +19,18 @@
 			<a href="#top" class="js_intro_link"><img class="logo" src="images/3dle_logo.png"></a>
             <ul class="caps">
             	<li class="codebold list_style"><div class="nav_sublist"><a href="#top" title="" class="list_text_style navbar_links js_intro_link">Introduction</a></div></li>
-            	<li class="codebold list_style "><div class="nav_sublist"><a href="#persona1" class="navbar_links js_persona_link">Persona</a>
-	            	<ul class="sublist">
-		                <li class="codebold sublist_listItem"><a href="#persona1" title="" class="list_text_style navbar_links js_persona1_link">Persona 1</a></li>
-		                <li class="codebold sublist_listItem"><a href="#persona2" title="" class="list_text_style navbar_links js_persona2_link">Persona 2</a></li>
-		                <li class="codebold sublist_listItem"><a href="#persona3" title="" class="list_text_style navbar_links js_persona3_link">Persona 3</a></li>
-		            </ul>
-		        </li>
-		        <li class="codebold list_style nav_sublist"><div class="nav_sublist"><a href="#scenario1" class="navbar_links js_scenario_link">Scenario</a>
-	            	<ul class="sublist">
-		                <li class="codebold sublist_listItem"><a href="#scenario1" title="" class="list_text_style navbar_links js_scenario1_link">Scenario 1</a></li>
-	                	<li class="codebold sublist_listItem"><a href="#scenario2" title="" class="list_text_style navbar_links js_scenario2_link">Scenario 2</a></li>
-	                	<li class="codebold sublist_listItem"><a href="#scenario3" title="" class="list_text_style navbar_links js_scenario3_link">Scenario 3</a></li>
-		            </ul>
-		            </div>
-		        </li>
+            	<li class="codebold list_style "><div class="nav_sublist"><a href="#persona1" class="navbar_links js_persona_link">Persona</a></li>
+		        <li class="codebold list_style nav_sublist"><div class="nav_sublist"><a href="#scenario1" class="navbar_links js_scenario_link">Scenario</a></div></li>
                 <li class="codebold list_style"><div class="nav_sublist"><a href="#gui" title="" class="list_text_style navbar_links js_gui_link">GUI</a></div></li>
             </ul>
+		</div>
+		<div class="social pull-right">
+
+				<ul class="">
+					<li class="social_list_item"><a href="" title="Facebook" target=""><i class="icon-facebook"></i></a></li>
+					<li class="social_list_item"><a href="" title="Twitter" target=""><i class="icon-twitter"></i></a></li>
+					<li class="social_list_item"><a href="" title="Instagram" target=""><i class="icon-instagram"></i></a></li>
+				</ul>
 		</div>
 		<div class="intro">
 			<div class="container">
@@ -55,17 +50,7 @@
                 
 			</div>
 		</div>
-		<div class="social">
-			<div class="container">
-				<p class="caps codebold social_text">stay connected with us</p>
-				<ul class="social_list">
-					<li class="social_list_item"><a href="" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-					<li class="social_list_item"><a href="" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-					<li class="social_list_item"><a href="" title="Instagram" target="_blank"><i class="icon-instagram"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div ng-controller="PersonaController as persona">
+		<div class="container" ng-controller="PersonaController as persona">
 			<div class="tabBar col-md-12" ng-controller="TabController as tab">
 				<ul class="nav nav-pills codebold" >
 					<li ng-repeat="personaTab in persona.profiles"><a href="" ng-class="{active: tab.isSet(personaTab.personaNo)}" ng-click="tab.setTab(personaTab.personaNo)">Persona {{personaTab.personaNo}}</a></li>
@@ -121,7 +106,7 @@
 				</div>
 			</div>
 		</div>
-		<div ng-controller="ScenarioController as scenarioCtrl">
+		<div class="container" ng-controller="ScenarioController as scenarioCtrl">
 			<div class="tabBar container" ng-controller="TabController as tab">
 				<ul class="nav nav-pills codebold ">
 					<li ng-repeat="scenarioTab in scenarioCtrl.situations"><a href="" ng-class="{active: tab.isSet(scenarioTab.scenarioNo)}" ng-click="tab.setTab(scenarioTab.scenarioNo)">Scenario {{scenarioTab.scenarioNo}}</a></li>
@@ -142,9 +127,9 @@
 				</div>
 				<ul class="gallery_list">
 					<li class="gallery_item"><a class="js_gallery_item" href="" title="_blank"><img class="img_style" src="images/GUI_screen_1.png"></a></li>
-					<li class="gallery_item"><a href="" title="_blank"><img class="img_style" src="images/GUI_screen_2.png"></a></li>
-					<li class="gallery_item"><a href="" title="_blank"><img class="img_style" src="images/GUI_screen_3.png"></a></li>
-					<li class="gallery_item"><a href="" title="_blank"><img class="img_style" src="images/GUI_screen_4.png"></a></li>
+					<li class="gallery_item"><a href="" title=""><img class="img_style" src="images/GUI_screen_2.png"></a></li>
+					<li class="gallery_item"><a href="" title=""><img class="img_style" src="images/GUI_screen_3.png"></a></li>
+					<li class="gallery_item"><a href="" title=""><img class="img_style" src="images/GUI_screen_4.png"></a></li>
 				</ul>
 				
                 
@@ -157,7 +142,7 @@
 					<p class="caps codebold left_footer">&#169; 2014 copyright 3dle</p>
 				</div>
 				<div class="col span_6">
-					<p class="caps codebold footer_legal"><a class="" href="" title="Terms of Use" target="_blank">terms of use</a> | <a class=""  href="" title="Privacy Policy" target="_blank">privacy policy</a></p>
+					<p class="caps codebold footer_legal"><a class="" href="" title="of Use" target="_blank">terms of use</a> | <a class=""  href="" title="Privacy Policy" target="_blank">privacy policy</a></p>
 				</div>
 			</div>
 		</footer>
