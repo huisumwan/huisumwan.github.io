@@ -1,8 +1,11 @@
 $(document).ready(function() {
-    var a = function(){
-        alert(1);
-    };
-    a();
+
+    var navbar = document.getElementsByClassName("navbar");
+    var navbarHeight = $(navbar).height();
+    $("body").css("margin-top", "151px");
+    console.log(navbarHeight);
+
+
     $(".js_intro_link").click(function() {
         $('html, body').animate({
         scrollTop: $("#top").offset().top 
@@ -20,7 +23,7 @@ $(document).ready(function() {
             }, 1000);
         }
     });
-      $(".js_scenario_link").click(function() {
+    $(".js_scenario_link").click(function() {
         if(!$(".navbar").hasClass("shrink")){
             $('html, body').animate({
             scrollTop: $("#scenario1").offset().top - 89
