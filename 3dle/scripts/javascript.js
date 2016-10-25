@@ -1,6 +1,13 @@
 $(document).ready(function() {
     var a = function(){
-        alert(1);
+        var button = document.getElementsByClassName("navbar_links");
+        $(button).click(function(){
+            
+        });
+        var navbar = document.getElementsByClassName("navbar");
+        var navbarHeight = $(navbar).height();
+        $("body").css("margin-top", navbarHeight);
+        console.log(navbarHeight);
     };
     a();
     $(".js_intro_link").click(function() {

@@ -9,6 +9,8 @@
 	<form>
 		Type a string: <input type="text" id="userInput"></input>
 		<input type="button" onClick="parse()" value="Parse!"></input>
+		<input type="button" onClick="getDigits()" value="Digits!"></input>
+		<input type="button" onClick="reverseCases()" value="Reverse!"></input>
 	</form>
 	<p id="a"></p>
 	<p id="b"></p>
@@ -45,6 +47,22 @@
 		c.innerHTML = "Consonant count : " + consonantCount;
 		console.log(userInput);
 		console.log(emptyString);
+	}
+	function getDigits(){
+		var userInput = document.getElementById("userInput").value;
+		var result = userInput.match(/\d+/g);
+		if(result != null){
+			a.innerHTML = "Numbers found: " + result;
+		}
+	}
+	function reverseCases(){
+		var userInput = document.getElementById("userInput").value;
+		var result = userInput.replace(/([a-z]+)|([A-Z]+)/g, function(match, chr){
+			return chr ? match.toUpperCase() : match.toLowerCase();
+		});
+		if(result != null){
+			a.innerHTML = "Result: " + result;
+		}
 	}
 </script>
 </html>
