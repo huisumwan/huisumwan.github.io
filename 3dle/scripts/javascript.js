@@ -66,11 +66,11 @@ $(document).ready(function() {
             e.preventDefault();
             if($(document).scrollTop() > 50){
                 $(".navbar").addClass("shrink");
-                $(".logo").addClass("small_img");
+                $(".logo").addClass("animateLogo");
             }
             else{
                 $(".navbar").removeClass("shrink");
-                $(".logo").removeClass("small_img");
+                $(".logo").removeClass("animateLogo");
             }
         });
         $(".js_gallery_item").click(function(){
